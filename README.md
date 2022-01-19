@@ -30,6 +30,10 @@
         
         `const char* password =  "type password here";`
         
+    - Connect to firebase by pasting url (provided by admin):
+        
+        `String url = "paste firebase url here";  `
+        
     - I believe no other libraries are needed. If needed, more info here: [https://medium.com/firebase-developers/using-firebase-to-control-your-arduino-project-over-the-web-ba94569d172c](https://medium.com/firebase-developers/using-firebase-to-control-your-arduino-project-over-the-web-ba94569d172c)
 - Restart Arduino IDE
 
