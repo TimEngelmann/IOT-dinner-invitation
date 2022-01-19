@@ -9,7 +9,8 @@
 - Install the **mp3 player** library
     - Go to t*ools > library-manager*
     - Install the DFRobotDFPlayerMini library
-      <img width="864" alt="Bildschirmfoto 2022-01-18 um 23 56 25" src="https://user-images.githubusercontent.com/46136690/150093757-cd534909-c3a0-4c68-b674-23c8cf644b69.png">
+    
+      <img width="735" alt="Bildschirmfoto 2022-01-18 um 23 56 25" src="https://user-images.githubusercontent.com/46136690/150093757-cd534909-c3a0-4c68-b674-23c8cf644b69.png">
     - If needed, more info here: [https://www.youtube.com/watch?v=kq2RLz65_w0](https://www.youtube.com/watch?v=kq2RLz65_w0)
     
 - Install the **display** library
@@ -25,14 +26,14 @@
     
 - Enable **wifi** connection
     - Set WIFI credentials by changing code:
-        
+    
         `const char* ssid = "type Wifi name here";`
         
         `const char* password =  "type password here";`
         
     - Connect to firebase by pasting url (provided by admin):
-        
-        `String url = "paste firebase url here";  `
+    
+        `String url = "paste firebase url here";`
         
     - I believe no other libraries are needed. If needed, more info here: [https://medium.com/firebase-developers/using-firebase-to-control-your-arduino-project-over-the-web-ba94569d172c](https://medium.com/firebase-developers/using-firebase-to-control-your-arduino-project-over-the-web-ba94569d172c)
 - Restart Arduino IDE
