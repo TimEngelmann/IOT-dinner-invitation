@@ -1,6 +1,17 @@
-# food_call
+# IOT-dinner-invitation
+Want to invite your neighbor for dinner but you don't like texting? Well then just give them of those boxes and keep one for you. Press one of the buttons to send out a dinner invite. Your neighbor will receive it through their box: a voice makes an announcment and it will show on the screen. Your neighbor then has some time to accept or decline your invite and you will of course be notified about their decision.
 
-# Installation
+## How it works?
+Both microcontrollers are connected to wifi (doesn't need to be the same). Every 20 seconds they make an https request to check a single variable (communication/invite) in a realtime firebase database. If its 0 there is no invite, if its 1 the neighbor posted an invite. From there it becomes a state automat (see sketch). 
+
+<img src="https://user-images.githubusercontent.com/46136690/168020001-de1004d2-4c09-46d7-a12f-3b544f1fbca9.png" width="400">
+
+
+## Circuit Design
+<img src="https://user-images.githubusercontent.com/46136690/168016286-f7d75826-7e0b-4afb-bcca-fa6a89efdcaa.png" width="600">
+<img src="https://user-images.githubusercontent.com/46136690/168016467-19ecfbb7-0044-4da5-8e48-8840ea85013f.png" width="600">
+
+## Installation
 
 - Install Arduino **IDE**: [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software)
 - Follow the following steps out of the handbook to install the **board** library (ESP32-Platform)
@@ -20,12 +31,12 @@
     - Set WIFI credentials by changing code:\
         `const char* ssid = "type Wifi name here";`\
         `const char* password =  "type password here";`
-    - Connect to firebase by pasting url (provided by admin):\
+    - Setup firebase and connect it to microcontroller by pasting url:\
         `String url = "paste firebase url here";`
     - I believe no other libraries are needed. If needed, more info here: [https://medium.com/firebase-developers/using-firebase-to-control-your-arduino-project-over-the-web-ba94569d172c](https://medium.com/firebase-developers/using-firebase-to-control-your-arduino-project-over-the-web-ba94569d172c)
 - Restart Arduino IDE
 
-# Load code to board
+## Load code to board
 
 - Connect board via USB to PC
 - Make sure that right port is selected under *Tools > Port > {port name}*
@@ -34,7 +45,7 @@
     - If it doesn’t connect to the board, press the *boot* button on the ESP32 while the code is uploading, this should help
 - Once code is uploaded fully you can disconnect the board if you want
 
-# Debugging
+## Debugging
 
 - Install Serial Tools in the MacAppStore: [https://apps.apple.com/de/app/serialtools/id611021963?mt=12](https://apps.apple.com/de/app/serialtools/id611021963?mt=12)
 - Select the right port and set the bitrate to 115200
